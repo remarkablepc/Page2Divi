@@ -6,11 +6,11 @@ Page2Divi converts pages and site content into Divi-compatible JSON and download
 
 ## Download
 
-- File: `Page2Divi-v0020.exe`
+- File: `Page2Divi-v0021.exe`
 - Platform: Windows x64
 - Build type: Single-file executable
 - Size: 14.94 MB
-- SHA256: `C6EE04D1A885DD106FB0C5B1B376B6BE755D46F14CAB253D65C4E0E01D6F55C4`
+- SHA256: `62716C88C162AC4FDCA796F4F1FA67A047C5DF8D4634EA97CEA07B32C55BFB60`
 
 ## Notes
 
@@ -20,6 +20,6 @@ Page2Divi converts pages and site content into Divi-compatible JSON and download
 
 ## Usage
 
-1. Download `Page2Divi-v0020.exe`.
+1. Download `Page2Divi-v0021.exe`.
 2. Run it on Windows.
 3. Use the app to convert a URL, HTML, file list, ZIP, or local source into Divi output.
