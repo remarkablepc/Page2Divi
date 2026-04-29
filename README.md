@@ -12,17 +12,17 @@ This repo publishes the **packaged Windows binary only**. Source code, conversio
 
 | | |
 | --- | --- |
-| **File** | `Page2Divi-v0027.exe` |
+| **File** | `Page2Divi-v0030.exe` |
 | **Platform** | Windows x64 |
 | **Build type** | Single‑file executable (no installer, no admin required) |
-| **Size** | 15.00 MB (15,728,298 bytes) |
-| **SHA256** | `87731CD1A57C7319D63EE950D6DEB7882B184A9C73FC6B39435B84B345972910` |
+| **Size** | 15.00 MB (15,730,308 bytes) |
+| **SHA256** | `9567AF37A4B4F720FC81817398C3A49E65AF540AD4E5B5A6125D09C5D7E3CCD3` |
 | **Built** | April 29, 2026 |
 
 To verify the download in PowerShell:
 
 ```powershell
-Get-FileHash .\Page2Divi-v0027.exe -Algorithm SHA256
+Get-FileHash .\Page2Divi-v0030.exe -Algorithm SHA256
 ```
 
 ---
@@ -61,7 +61,7 @@ The full conversion matrix is in the source repo: [CONVERSION_MATRIX.md](https:/
 
 ## How to use it
 
-1. **Download** `Page2Divi-v0027.exe` from this repo.
+1. **Download** `Page2Divi-v0030.exe` from this repo.
 2. **Run** it on Windows (no install, no admin).
 3. Pick an input — URL, URL list, sitemap, pasted HTML, local file, or source folder.
 4. Pick **Divi 4** or **Divi 5** as the target.
@@ -75,13 +75,13 @@ The full conversion matrix is in the source repo: [CONVERSION_MATRIX.md](https:/
 The EXE doubles as a CLI:
 
 ```powershell
-Page2Divi-v0027.exe --url "https://example.com/page" --divi-version divi4
-Page2Divi-v0027.exe --sitemap "https://example.com/sitemap.xml" --divi-version divi5
-Page2Divi-v0027.exe --url-list ".\pages.txt"
-Page2Divi-v0027.exe --file ".\MySiteExport.zip"
-Page2Divi-v0027.exe --selftest        # runs bundled regression tests
-Page2Divi-v0027.exe --version
-Page2Divi-v0027.exe --update-check
+Page2Divi-v0030.exe --url "https://example.com/page" --divi-version divi4
+Page2Divi-v0030.exe --sitemap "https://example.com/sitemap.xml" --divi-version divi5
+Page2Divi-v0030.exe --url-list ".\pages.txt"
+Page2Divi-v0030.exe --file ".\MySiteExport.zip"
+Page2Divi-v0030.exe --selftest        # runs bundled regression tests
+Page2Divi-v0030.exe --version
+Page2Divi-v0030.exe --update-check
 ```
 
 Other useful flags: `--heading-mapping`, `--internal-links` + `--target-base-url`.
