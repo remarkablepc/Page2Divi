@@ -18,7 +18,6 @@ From the [v0043 release](https://github.com/remarkablepc/Page2Divi-exe/releases/
 | --- | --- | --- |
 | **Windows x64** | `Page2Divi-v0043-windows.zip` | Single-file `Page2Divi.exe` inside. No installer, no admin required. |
 | **macOS (Apple Silicon)** | `Page2Divi-v0043-macos-arm64.zip` | `Page2Divi.app` bundle. **Experimental and untested by the author** — see the macOS notes below. |
-| **macOS (Intel)** | *(not currently shipped)* | Open an issue if you need a prebuilt Intel binary. |
 
 ---
 
