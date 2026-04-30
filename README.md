@@ -1,46 +1,46 @@
-# Page2Divi â€” Binary Releases
+# Page2Divi — Binary Releases
 
-**Page2Divi is a small standalone desktop tool that converts pages and HTML into Diviâ€‘compatible import JSON.**
+**Page2Divi is a small standalone desktop tool that converts pages and HTML into Divi-compatible import JSON.**
 
-It rebuilds page structure from live URLs, pasted markup, local HTML / MHTML files, savedâ€‘page ZIPs, source folders, WordPress WXR exports, GetSimple CMS XML, and existing Divi 4 / 5 layouts â€” and writes a `page.json` you import through the Divi Builder's Portability dialog.
+It rebuilds page structure from live URLs, pasted markup, local HTML / MHTML files, saved-page ZIPs, source folders, WordPress WXR exports, GetSimple CMS XML, and existing Divi 4 / 5 layouts — and writes a `page.json` you import through the Divi Builder's Portability dialog.
 
 This repo publishes the **packaged binaries** for Windows and macOS. The latest builds are always on the [Releases page](https://github.com/remarkablepc/Page2Divi-exe/releases).
 
 ---
 
-## Download â€” latest (v0043)
+## Download — latest (v0043)
 
 Go to the [v0043 release](https://github.com/remarkablepc/Page2Divi-exe/releases/tag/v0043) and grab:
 
 | Platform | File | Notes |
 | --- | --- | --- |
-| **Windows x64** | `Page2Divi-v0043-windows.zip` | Singleâ€‘file `Page2Divi.exe` inside. No installer, no admin required. |
-| **macOS (Apple Silicon)** | `Page2Divi-v0043-macos-arm64.zip` | `Page2Divi.app` bundle. **Experimental and untested by the author** â€” see the macOS notes below. |
-| **macOS (Intel)** | *(not currently shipped)* | Build from source â€” open an issue if you need a prebuilt Intel binary. |
+| **Windows x64** | `Page2Divi-v0043-windows.zip` | Single-file `Page2Divi.exe` inside. No installer, no admin required. |
+| **macOS (Apple Silicon)** | `Page2Divi-v0043-macos-arm64.zip` | `Page2Divi.app` bundle. **Experimental and untested by the author** — see the macOS notes below. |
+| **macOS (Intel)** | *(not currently shipped)* | Open an issue if you need a prebuilt Intel binary. |
 
-> The older singleâ€‘file `Page2Divi-v0042.exe` is still in the repo root as a fallback for directâ€‘link users; new releases ship through the Releases tab.
+> The older single-file `Page2Divi-v0042.exe` is still in the repo root as a fallback for direct-link users; new releases ship through the Releases tab.
 
 ---
 
 ## Running on Windows
 
 1. Download `Page2Divi-v0043-windows.zip` from the [latest release](https://github.com/remarkablepc/Page2Divi-exe/releases/latest).
-2. Extract the zip. Run `Page2Divi.exe` â€” no installer, no admin.
-3. SmartScreen may show *"More info â†’ Run anyway"* on the first launch because the EXE isn't CA codeâ€‘signed.
+2. Extract the zip. Run `Page2Divi.exe` — no installer, no admin.
+3. SmartScreen may show *"More info -> Run anyway"* on the first launch because the EXE isn't CA code-signed.
 
 ---
 
 ## Running on macOS (experimental, untested)
 
-> âš ï¸ **The macOS build has not been tested by the author.** It builds from the same source tree and the code paths it touches are crossâ€‘platform, but Macâ€‘specific behaviour (Gatekeeper, file dialogs, Tk on Retina, etc.) hasn't been verified endâ€‘toâ€‘end. Please open an issue if anything breaks.
+> **The macOS build has not been tested by the author.** It builds from the same source tree and the code paths it touches are cross-platform, but Mac-specific behaviour (Gatekeeper, file dialogs, Tk on Retina, etc.) hasn't been verified end-to-end. Please open an issue if anything breaks.
 
 1. Download `Page2Divi-v0043-macos-arm64.zip` from the [latest release](https://github.com/remarkablepc/Page2Divi-exe/releases/latest).
 2. Unzip it. You'll get `Page2Divi.app`. Move it to `/Applications` (optional but recommended).
-3. The `.app` is **not codeâ€‘signed or notarized**, so macOS will refuse to launch it on a doubleâ€‘click. To allow it once:
+3. The `.app` is **not code-signed or notarized**, so macOS will refuse to launch it on a double-click. To allow it once:
 
-   **Rightâ€‘click (or Controlâ€‘click) the app â†’ Open â†’ Open** in the warning dialog.
+   **Right-click (or Control-click) the app → Open → Open** in the warning dialog.
 
-4. If macOS still refuses with *"â€¦is damaged and can't be opened"*, strip the quarantine attribute from Terminal:
+4. If macOS still refuses with *"…is damaged and can't be opened"*, strip the quarantine attribute from Terminal:
 
    ```bash
    xattr -dr com.apple.quarantine /Applications/Page2Divi.app
@@ -48,7 +48,7 @@ Go to the [v0043 release](https://github.com/remarkablepc/Page2Divi-exe/releases
 
    Then launch normally.
 
-### Commandâ€‘line usage on macOS
+### Command-line usage on macOS
 
 ```bash
 /Applications/Page2Divi.app/Contents/MacOS/Page2Divi --url "https://example.com/page" --divi-version divi4
@@ -70,46 +70,46 @@ page2divi --url "https://example.com/page"
 
 - Convert **live URLs** (single, batch, or sitemap.xml).
 - Convert **pasted HTML** straight from a browser, an editor, or dev tools.
-- Convert **local files**: `.html`, `.mhtml`, `.zip` savedâ€‘page bundles, WordPress WXR XML, GetSimple CMS XML, or existing Divi 4 / 5 JSON (reâ€‘packaged to a different Divi version).
+- Convert **local files**: `.html`, `.mhtml`, `.zip` saved-page bundles, WordPress WXR XML, GetSimple CMS XML, or existing Divi 4 / 5 JSON (re-packaged to a different Divi version).
 - Convert **source folders** with sibling `images` / `assets` so relative links resolve.
-- Rebuild the **section / row / column / module skeleton** with perâ€‘builder structural mappings.
-- Preserve **section background images & colors**, **padding / margin**, **heading font + size + weight**, **text color**, **alignment**, **lineâ€‘height**, and other typography where the source HTML/CSS exposes it.
-- Download referenced **images, video posters, and sameâ€‘site documents** (PDF, Office, audio, video, archives) into the output folder so the imported page is selfâ€‘contained.
-- Detect **WooCommerce / JSONâ€‘LD / microdata product pages** and emit Divi WooCommerce dynamic modules (`et_pb_wc_*`) plus a static fallback section.
-- Run **entirely on your machine** â€” no telemetry, no login, no cloud.
+- Rebuild the **section / row / column / module skeleton** with per-builder structural mappings.
+- Preserve **section background images & colors**, **padding / margin**, **heading font + size + weight**, **text color**, **alignment**, **line-height**, and other typography where the source HTML/CSS exposes it.
+- Download referenced **images, video posters, and same-site documents** (PDF, Office, audio, video, archives) into the output folder so the imported page is self-contained.
+- Detect **WooCommerce / JSON-LD / microdata product pages** and emit Divi WooCommerce dynamic modules (`et_pb_wc_*`) plus a static fallback section.
+- Run **entirely on your machine** — no telemetry, no login, no cloud.
 
 ---
 
 ## What it does *not* do
 
-- âŒ Not a WordPress plugin and does not modify Divi.
-- âŒ Does **not** create Pages, Posts, Categories, Tags, Menu items, or WooCommerce products. The export is **page content only** (sections / rows / columns / modules + media).
-- âŒ Does not produce pixelâ€‘perfect copies â€” complex builder pages will need cleanup.
-- âŒ Does not bundle, redistribute, or download Divi. You bring your own Divi license.
-- âŒ Not tied to any account or service.
+- Not a WordPress plugin and does not modify Divi.
+- Does **not** create Pages, Posts, Categories, Tags, Menu items, or WooCommerce products. The export is **page content only** (sections / rows / columns / modules + media).
+- Does not produce pixel-perfect copies — complex builder pages will need cleanup.
+- Does not bundle, redistribute, or download Divi. You bring your own Divi license.
+- Not tied to any account or service.
 
 ---
 
 ## Builder & platform coverage
 
-WordPress core themes â€¢ Gutenberg core blocks â€¢ Elementor (live URL + JSON template export) â€¢ Beaver Builder â€¢ Bricks Builder â€¢ WPBakery / Visual Composer â€¢ Avada / Fusion â€¢ Oxygen â€¢ Thrive Architect â€¢ Astra theme + Spectra / UAGB blocks â€¢ Kadence Blocks â€¢ Divi 4 / Divi 5 source pages (with module-level Divi 4 â†” Divi 5 translation) â€¢ Wild Apricot â€¢ Duda â€¢ Clicksites.ai â€¢ WooCommerce product pages â€¢ CMS Made Simple â€¢ GetSimple CMS â€¢ Joomla â€¢ Drupal â€¢ Wix / Squarespace / Webflow / HubSpot / Bootstrapâ€‘based pages â€¢ plain handâ€‘rolled HTML.
+WordPress core themes • Gutenberg core blocks • Elementor (live URL + JSON template export) • Beaver Builder • Bricks Builder • WPBakery / Visual Composer • Avada / Fusion • Oxygen • Thrive Architect • Astra theme + Spectra / UAGB blocks • Kadence Blocks • Divi 4 / Divi 5 source pages (with module-level Divi 4 to Divi 5 translation) • Wild Apricot • Duda • Clicksites.ai • WooCommerce product pages • CMS Made Simple • GetSimple CMS • Joomla • Drupal • Wix / Squarespace / Webflow / HubSpot / Bootstrap-based pages • plain hand-rolled HTML.
 
-The conversion matrix is available inside the app under **Help â†’ Conversion Matrix**.
+The conversion matrix is available inside the app under **Help → Conversion Matrix**.
 
 ---
 
 ## How to use it
 
 1. **Download** the appropriate zip from the [latest release](https://github.com/remarkablepc/Page2Divi-exe/releases/latest).
-2. **Run** it (Windows: extract and doubleâ€‘click; macOS: see the section above for Gatekeeper).
-3. Pick an input â€” URL, URL list, sitemap, pasted HTML, local file, or source folder.
+2. **Run** it (Windows: extract and double-click; macOS: see the section above for Gatekeeper).
+3. Pick an input — URL, URL list, sitemap, pasted HTML, local file, or source folder.
 4. Pick **Divi 4** or **Divi 5** as the target.
-5. Click **Preview** (parser dryâ€‘run) or **Convert** (writes `page.json` + media).
-6. In Divi â†’ **Portability â†’ Import** the resulting `page.json`.
+5. Click **Preview** (parser dry-run) or **Convert** (writes `page.json` + media).
+6. In Divi → **Portability → Import** the resulting `page.json`.
 
 ---
 
-## Commandâ€‘line usage (Windows)
+## Command-line usage (Windows)
 
 The EXE doubles as a CLI:
 
@@ -129,10 +129,10 @@ Other useful flags: `--heading-mapping`, `--internal-links` + `--target-base-url
 
 ## Output
 
-A siteâ€‘specific folder under `output/<domain>/`:
+A site-specific folder under `output/<domain>/`:
 
-- `page.json` â€” Divi import bundle (Divi shortcode payload inside a JSON envelope).
-- `media/` â€” downloaded assets used by the export, including referenced images plus same-site documents such as PDF, Office, audio, video, and archive files.
+- `page.json` — Divi import bundle (Divi shortcode payload inside a JSON envelope).
+- `media/` — downloaded assets used by the export, including referenced images plus same-site documents such as PDF, Office, audio, video, and archive files.
 - A conversion log with parser diagnostics + a text mockup of the emitted layout.
 
 Reruns reuse files already on disk for the same source URL.
@@ -141,17 +141,17 @@ Reruns reuse files already on disk for the same source URL.
 
 ## Known limitations
 
-- **Pixelâ€‘perfect cloning is not a goal** â€” complex builder pages, custom JS widgets, and designâ€‘tokenâ€‘driven CSS will need manual cleanup.
+- **Pixel-perfect cloning is not a goal** — complex builder pages, custom JS widgets, and design-token-driven CSS will need manual cleanup.
 - **Deeply nested or unusual HTML** may simplify into Text fallback modules; content is kept, structure flattens.
 - **Elementor galleries** fall back to individual Image modules (Divi's Gallery module needs WordPress attachment IDs).
 - **WooCommerce dynamic modules** (`et_pb_wc_*`) only render fully when bound to a real WooCommerce product on the destination site; a static fallback section is always emitted alongside them.
-- **macOS build is unsigned and untested** â€” see the macOS section above.
+- **macOS build is unsigned and untested** — see the macOS section above.
 
 ---
 
 ## SmartScreen / antivirus notes
 
-The Windows EXE is unsigned by a CA, so SmartScreen may show *"More info â†’ Run anyway"* the first time you launch it. The macOS `.app` is also unsigned (see Gatekeeper notes above). Each release has integrity hashes available via the GitHub API if you want to verify downloads independently.
+The Windows EXE is unsigned by a CA, so SmartScreen may show *"More info -> Run anyway"* the first time you launch it. The macOS `.app` is also unsigned (see Gatekeeper notes above). Each release has integrity hashes available via the GitHub API if you want to verify downloads independently.
 
 ---
 
@@ -161,7 +161,7 @@ If you run into an issue or want to suggest an improvement, use the issue tracke
 
 If it saves you time and you'd like to support development, there's a sponsor link in the app's About dialog. Optional, never required.
 
-â€” David
+— David
 
 ---
 
