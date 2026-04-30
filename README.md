@@ -1,24 +1,24 @@
-# Page2Divi — Binary Releases
+﻿# Page2Divi — Binary Releases
 
 **Page2Divi is a small standalone desktop tool that converts pages and HTML into Divi-compatible import JSON.**
 
 It rebuilds page structure from live URLs, pasted markup, local HTML / MHTML files, saved-page ZIPs, source folders, WordPress WXR exports, GetSimple CMS XML, and existing Divi 4 / 5 layouts — and writes a `page.json` you import through the Divi Builder's Portability dialog.
 
-This repo publishes the **packaged binaries** for Windows and macOS. The latest builds are always on the [Releases page](https://github.com/remarkablepc/Page2Divi-exe/releases).
+## ➜ [Download the latest release](https://github.com/remarkablepc/Page2Divi-exe/releases/latest)
+
+All binaries (Windows + macOS) are published on the **[Releases page](https://github.com/remarkablepc/Page2Divi-exe/releases)**. This repo itself only holds the LICENSE and this README — the executables live under **Releases** on the right sidebar.
 
 ---
 
-## Download — latest (v0043)
+## Latest — v0043
 
-Go to the [v0043 release](https://github.com/remarkablepc/Page2Divi-exe/releases/tag/v0043) and grab:
+From the [v0043 release](https://github.com/remarkablepc/Page2Divi-exe/releases/tag/v0043), grab:
 
 | Platform | File | Notes |
 | --- | --- | --- |
 | **Windows x64** | `Page2Divi-v0043-windows.zip` | Single-file `Page2Divi.exe` inside. No installer, no admin required. |
 | **macOS (Apple Silicon)** | `Page2Divi-v0043-macos-arm64.zip` | `Page2Divi.app` bundle. **Experimental and untested by the author** — see the macOS notes below. |
 | **macOS (Intel)** | *(not currently shipped)* | Open an issue if you need a prebuilt Intel binary. |
-
-> The older single-file `Page2Divi-v0042.exe` is still in the repo root as a fallback for direct-link users; new releases ship through the Releases tab.
 
 ---
 
