@@ -4,7 +4,7 @@
 
 It rebuilds page structure from live URLs, pasted markup, local HTML / MHTML files, saved‑page ZIPs, source folders, WordPress WXR exports, GetSimple CMS XML, and existing Divi 4 / 5 layouts — and writes a `page.json` you import through the Divi Builder's Portability dialog.
 
-This repo publishes the **packaged Windows binary only**. Source code, conversion matrix, and detailed docs live at [remarkablepc/Page2Divi-src](https://github.com/remarkablepc/Page2Divi-src).
+This repo publishes the **packaged Windows binary only**.
 
 ---
 
@@ -12,17 +12,17 @@ This repo publishes the **packaged Windows binary only**. Source code, conversio
 
 | | |
 | --- | --- |
-| **File** | `Page2Divi-v0030.exe` |
+| **File** | `Page2Divi-v0031.exe` |
 | **Platform** | Windows x64 |
 | **Build type** | Single‑file executable (no installer, no admin required) |
-| **Size** | 15.00 MB (15,730,308 bytes) |
-| **SHA256** | `9567AF37A4B4F720FC81817398C3A49E65AF540AD4E5B5A6125D09C5D7E3CCD3` |
+| **Size** | 15.00 MB (15,729,937 bytes) |
+| **SHA256** | `B666998519325732E9500CBC313A89D27E6F12A18480BDD9F99351AAC39DD31B` |
 | **Built** | April 29, 2026 |
 
 To verify the download in PowerShell:
 
 ```powershell
-Get-FileHash .\Page2Divi-v0030.exe -Algorithm SHA256
+Get-FileHash .\Page2Divi-v0031.exe -Algorithm SHA256
 ```
 
 ---
@@ -55,13 +55,13 @@ Get-FileHash .\Page2Divi-v0030.exe -Algorithm SHA256
 
 WordPress core themes • Gutenberg core blocks • Elementor • Beaver Builder • Bricks Builder • WPBakery / Visual Composer • Avada / Fusion • Oxygen • Thrive Architect • Divi 4 / Divi 5 source pages • Wild Apricot • Duda • Clicksites.ai • WooCommerce product pages • CMS Made Simple • GetSimple CMS • Joomla • Drupal • Wix / Squarespace / Webflow / HubSpot / Bootstrap‑based pages • plain hand‑rolled HTML.
 
-The full conversion matrix is in the source repo: [CONVERSION_MATRIX.md](https://github.com/remarkablepc/Page2Divi-src/blob/master/CONVERSION_MATRIX.md).
+The conversion matrix is available inside the app under **Help → Conversion Matrix**.
 
 ---
 
 ## How to use it
 
-1. **Download** `Page2Divi-v0030.exe` from this repo.
+1. **Download** `Page2Divi-v0031.exe` from this repo.
 2. **Run** it on Windows (no install, no admin).
 3. Pick an input — URL, URL list, sitemap, pasted HTML, local file, or source folder.
 4. Pick **Divi 4** or **Divi 5** as the target.
@@ -75,13 +75,13 @@ The full conversion matrix is in the source repo: [CONVERSION_MATRIX.md](https:/
 The EXE doubles as a CLI:
 
 ```powershell
-Page2Divi-v0030.exe --url "https://example.com/page" --divi-version divi4
-Page2Divi-v0030.exe --sitemap "https://example.com/sitemap.xml" --divi-version divi5
-Page2Divi-v0030.exe --url-list ".\pages.txt"
-Page2Divi-v0030.exe --file ".\MySiteExport.zip"
-Page2Divi-v0030.exe --selftest        # runs bundled regression tests
-Page2Divi-v0030.exe --version
-Page2Divi-v0030.exe --update-check
+Page2Divi-v0031.exe --url "https://example.com/page" --divi-version divi4
+Page2Divi-v0031.exe --sitemap "https://example.com/sitemap.xml" --divi-version divi5
+Page2Divi-v0031.exe --url-list ".\pages.txt"
+Page2Divi-v0031.exe --file ".\MySiteExport.zip"
+Page2Divi-v0031.exe --selftest        # runs bundled regression tests
+Page2Divi-v0031.exe --version
+Page2Divi-v0031.exe --update-check
 ```
 
 Other useful flags: `--heading-mapping`, `--internal-links` + `--target-base-url`.
@@ -93,8 +93,7 @@ Other useful flags: `--heading-mapping`, `--internal-links` + `--target-base-url
 A site‑specific folder under `output/<domain>/`:
 
 - `page.json` — Divi import bundle (Divi shortcode payload inside a JSON envelope).
-- `images/` — every image referenced by the parsed modules (deduplicated by content hash).
-- `media/` — same‑site documents linked from the page.
+- `media/` — downloaded assets used by the export, including referenced images plus same-site documents such as PDF, Office, audio, video, and archive files.
 - A conversion log with parser diagnostics + a text mockup of the emitted layout.
 
 Reruns reuse files already on disk for the same source URL.
@@ -116,10 +115,9 @@ The EXE is signed by its own publisher hash but not code‑signed by a CA, so Wi
 
 ---
 
-## Source code, issues, and contributions
+## Support and feedback
 
-- Source: [remarkablepc/Page2Divi-src](https://github.com/remarkablepc/Page2Divi-src)
-- Issues / feature requests: open them on the source repo (sample HTML helps a lot).
+If you run into an issue or want to suggest an improvement, use the issue tracker on this repo. Sample HTML or a saved page helps a lot.
 
 If it saves you time and you'd like to support development, there's a sponsor link in the app's About dialog. Optional, never required.
 
