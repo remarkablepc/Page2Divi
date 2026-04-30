@@ -1,4 +1,4 @@
-﻿# Page2Divi — Binary Releases
+# Page2Divi — Binary Releases
 
 **Page2Divi is a small standalone desktop tool that converts pages and HTML into Divi-compatible import JSON.**
 
@@ -10,20 +10,20 @@ All binaries (Windows + macOS) are published on the **[Releases page](https://gi
 
 ---
 
-## Latest — v0046
+## Latest — v0047
 
-From the [v0046 release](https://github.com/remarkablepc/Page2Divi-exe/releases/tag/v0046), grab:
+From the [v0047 release](https://github.com/remarkablepc/Page2Divi-exe/releases/tag/v0047), grab:
 
 | Platform | File | Notes |
 | --- | --- | --- |
-| **Windows x64** | `Page2Divi-v0046-windows.zip` | Single-file `Page2Divi.exe` inside. No installer, no admin required. |
-| **macOS (universal2)** | `Page2Divi-v0046-macos-universal2.zip` | `Page2Divi.app` bundle intended for both Apple Silicon and Intel Macs. **Experimental and untested by the author** — see the macOS notes below. |
+| **Windows x64** | `Page2Divi-v0047-windows.zip` | Single-file `Page2Divi.exe` inside. No installer, no admin required. |
+| **macOS (universal2)** | `Page2Divi-v0047-macos-universal2.zip` | `Page2Divi.app` bundle intended for both Apple Silicon and Intel Macs. **Experimental and untested by the author** — see the macOS notes below. |
 
 ---
 
 ## Running on Windows
 
-1. Download `Page2Divi-v0046-windows.zip` from the [latest release](https://github.com/remarkablepc/Page2Divi-exe/releases/latest).
+1. Download `Page2Divi-v0047-windows.zip` from the [latest release](https://github.com/remarkablepc/Page2Divi-exe/releases/latest).
 2. Extract the zip. Run `Page2Divi.exe` — no installer, no admin.
 3. SmartScreen may show *"More info -> Run anyway"* on the first launch because the EXE isn't CA code-signed.
 
@@ -33,7 +33,7 @@ From the [v0046 release](https://github.com/remarkablepc/Page2Divi-exe/releases/
 
 > **The macOS build has not been tested by the author.** It builds from the same source tree and the code paths it touches are cross-platform, but Mac-specific behaviour (Gatekeeper, file dialogs, Tk on Retina, etc.) hasn't been verified end-to-end. Please open an issue if anything breaks.
 
-1. Download `Page2Divi-v0046-macos-universal2.zip` from the [latest release](https://github.com/remarkablepc/Page2Divi-exe/releases/latest).
+1. Download `Page2Divi-v0047-macos-universal2.zip` from the [latest release](https://github.com/remarkablepc/Page2Divi-exe/releases/latest).
 2. Unzip it. You'll get `Page2Divi.app`. Move it to `/Applications` (optional but recommended).
 3. The `.app` is **not code-signed or notarized**, so macOS will refuse to launch it on a double-click. To allow it once:
 
