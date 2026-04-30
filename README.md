@@ -12,17 +12,17 @@ This repo publishes the **packaged Windows binary only**.
 
 | | |
 | --- | --- |
-| **File** | `Page2Divi-v0041.exe` |
+| **File** | `Page2Divi-v0042.exe` |
 | **Platform** | Windows x64 |
 | **Build type** | Single‑file executable (no installer, no admin required) |
-| **Size** | 15.05 MB (15,777,331 bytes) |
-| **SHA256** | `462E74F00BBA0B407A47C482DE3A0D47E18305D64BA7E50CCC74B86A3AC031B6` |
+| **Size** | 15.05 MB (15,779,126 bytes) |
+| **SHA256** | `C65E88CE669FB9F8E8052479D1B965F904EEEC6AC7295B06CA7140CFDD3E85AF` |
 | **Built** | April 29, 2026 |
 
 To verify the download in PowerShell:
 
 ```powershell
-Get-FileHash .\Page2Divi-v0041.exe -Algorithm SHA256
+Get-FileHash .\Page2Divi-v0042.exe -Algorithm SHA256
 ```
 
 ---
@@ -61,7 +61,7 @@ The conversion matrix is available inside the app under **Help → Conversion Ma
 
 ## How to use it
 
-1. **Download** `Page2Divi-v0041.exe` from this repo.
+1. **Download** `Page2Divi-v0042.exe` from this repo.
 2. **Run** it on Windows (no install, no admin).
 3. Pick an input — URL, URL list, sitemap, pasted HTML, local file, or source folder.
 4. Pick **Divi 4** or **Divi 5** as the target.
@@ -75,13 +75,13 @@ The conversion matrix is available inside the app under **Help → Conversion Ma
 The EXE doubles as a CLI:
 
 ```powershell
-Page2Divi-v0041.exe --url "https://example.com/page" --divi-version divi4
-Page2Divi-v0041.exe --sitemap "https://example.com/sitemap.xml" --divi-version divi5
-Page2Divi-v0041.exe --url-list ".\pages.txt"
-Page2Divi-v0041.exe --file ".\MySiteExport.zip"
-Page2Divi-v0041.exe --selftest        # runs bundled regression tests
-Page2Divi-v0041.exe --version
-Page2Divi-v0041.exe --update-check
+Page2Divi-v0042.exe --url "https://example.com/page" --divi-version divi4
+Page2Divi-v0042.exe --sitemap "https://example.com/sitemap.xml" --divi-version divi5
+Page2Divi-v0042.exe --url-list ".\pages.txt"
+Page2Divi-v0042.exe --file ".\MySiteExport.zip"
+Page2Divi-v0042.exe --selftest        # runs bundled regression tests
+Page2Divi-v0042.exe --version
+Page2Divi-v0042.exe --update-check
 ```
 
 Other useful flags: `--heading-mapping`, `--internal-links` + `--target-base-url`.
@@ -122,3 +122,9 @@ If you run into an issue or want to suggest an improvement, use the issue tracke
 If it saves you time and you'd like to support development, there's a sponsor link in the app's About dialog. Optional, never required.
 
 — David
+
+---
+
+## License
+
+All rights reserved. See [LICENSE](LICENSE). The executable is for personal or authorized internal business use; redistribution, repackaging, reverse engineering, and derivative works are not permitted without prior written consent.

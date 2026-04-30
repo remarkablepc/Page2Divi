@@ -1,0 +1,37 @@
+Copyright (c) 2026 David Hopper / remarkablepc. All rights reserved.
+
+This repository distributes the compiled Page2Divi Windows executable
+(Page2Divi-vNNNN.exe) for end-user download. The executable, the README,
+and any other files in this repository are made available solely so that
+licensed users can obtain and verify the binary.
+
+No license is granted, expressly or by implication, to:
+
+  - copy, modify, redistribute, repackage, mirror, or rehost the
+    executable or any other file in this repository;
+  - reverse engineer, decompile, disassemble, or otherwise attempt to
+    derive the source code of the executable, except to the extent such
+    activity is expressly permitted by applicable law that cannot be
+    waived by contract;
+  - create derivative works based on the executable;
+  - sublicense, sell, rent, lease, or otherwise transfer the executable
+    to any third party;
+  - use the executable to provide a paid service that competes with the
+    original product without prior written permission.
+
+Personal and internal business use of the downloaded executable to
+convert pages into Divi-compatible JSON for sites the user controls or
+has been authorized to migrate is permitted. The executable is provided
+"AS IS", without warranty of any kind, express or implied, including
+but not limited to the warranties of merchantability, fitness for a
+particular purpose, and non-infringement. In no event shall the author
+be liable for any claim, damages, or other liability arising from the
+use of this software.
+
+The Page2Divi name, the Page2Divi logo, and "remarkablepc" are
+trademarks of the author. They may not be used to endorse or promote
+products derived from this software without prior written permission.
+
+For licensing questions, partnership inquiries, or to request
+permissions outside the scope above, contact the publisher through the
+issue tracker on this repository.
