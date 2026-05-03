@@ -4,6 +4,26 @@
 
 It rebuilds page structure from live URLs, pasted markup, local HTML / MHTML files, saved-page ZIPs, source folders, WordPress WXR exports, GetSimple CMS XML, and existing Divi 4 / 5 layouts, then writes a `page.json` you import through the Divi Builder's Portability dialog.
 
+### Site2Divi (Exploratory Concept)
+
+I am exploring a possible future tool called **Site2Divi**.  
+This would not replace Page2Divi. Instead, it would build on the same engine and attempt to automate the full-site workflow for users who need to migrate an entire website into Divi.
+
+Because this concept involves creating WordPress pages, uploading images, rewriting internal links, and performing authenticated REST API operations, it would require a WordPress App Password. This is not optional. Page2Divi will remain offline and login‑free.
+
+The idea is still early and may or may not be feasible, but the general concept looks like this:
+
+- WordPress App Password authentication (required)
+- Crawl a site’s internal pages (following menus or sitemap)
+- Convert each page using the Page2Divi engine
+- Automatically create WordPress pages
+- Upload images and rewrite internal links
+- Rebuild menus or basic navigation structure
+- Produce a ready-to-edit Divi site
+
+This is only an exploratory idea at this stage.  
+I’m documenting it here mainly for transparency and to reserve the **Site2Divi** name while I continue researching what’s possible.
+
 ## Why this exists
 
 I wrote Page2Divi because real-world Divi migrations are repetitive and slow. Copying content, rebuilding sections, relinking media, and hand-translating layouts from other builders wastes time before the real design work even starts.
