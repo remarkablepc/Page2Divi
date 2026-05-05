@@ -4,6 +4,10 @@
 
 It rebuilds page structure from live URLs, pasted markup, local HTML / MHTML files, saved-page ZIPs, source folders, WordPress WXR exports, GetSimple CMS XML, and existing Divi 4 / 5 layouts, then writes a `page.json` you import through the Divi Builder's Portability dialog.
 
+![Page2Divi desktop app screenshot](images/page2divi-tool-screenshot.svg)
+
+_Sanitized example view of the desktop tool. Private URLs and local output paths are intentionally omitted._
+
 ## Why this exists
 
 I wrote Page2Divi because real-world Divi migrations are repetitive and slow. Copying content, rebuilding sections, relinking media, and hand-translating layouts from other builders wastes time before the real design work even starts.
