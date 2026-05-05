@@ -116,7 +116,9 @@ The conversion matrix is available inside the app under **Help -> Conversion Mat
 
 ---
 
-## How to use it
+## Quick Start
+
+If you just want the shortest path from source page to Divi import, this is it:
 
 1. **Download** the appropriate zip from the [latest release](https://github.com/remarkablepc/Page2Divi/releases/latest).
 2. **Run** it (Windows: extract and double-click; macOS: see the section above for Gatekeeper).
@@ -144,6 +146,30 @@ Page2Divi.exe --update-check
 ```
 
 Other useful flags include `--heading-mapping`, `--internal-links`, and `--target-base-url`.
+
+---
+
+## FAQ
+
+### Is this a WordPress plugin?
+
+No. It is a desktop tool that creates Divi-compatible import JSON on your machine. You still import the resulting `page.json` through Divi's Portability dialog.
+
+### Does it send my content anywhere?
+
+No telemetry, login, or cloud service is involved. The only network activity is fetching the URLs you explicitly tell it to fetch.
+
+### Will it make a pixel-perfect copy of my page?
+
+No. The goal is a strong structural starting point: sections, rows, modules, content, media, and useful styling where the source exposes it. Complex builder pages and custom front-end behavior still need cleanup in Divi.
+
+### Why do some pages still need manual review?
+
+Some sites render most of their visible content in the browser after the initial HTML loads. When that happens, Page2Divi may only receive a shell page or incomplete markup. The Activity Log now calls that out more clearly and suggests the next practical fallback.
+
+### What is the `HTML/` folder for?
+
+It is an experimental preview/reference export for inspection and troubleshooting. It is not imported into Divi and should be treated as a debugging aid rather than a polished browser-faithful preview.
 
 ---
 
