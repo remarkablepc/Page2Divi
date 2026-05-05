@@ -121,7 +121,7 @@ The conversion matrix is available inside the app under **Help -> Conversion Mat
 5. Click **Preview** (parser dry-run) or **Convert** (writes `page.json` + media).
 6. In Divi, use **Portability -> Import** on the resulting `page.json`.
 
-The desktop UI also includes a bundled Conversion Matrix viewer plus an Activity Log that surfaces parser warnings, fallback guidance, and copyable troubleshooting notes.
+The desktop UI also includes a bundled Conversion Matrix viewer plus an Activity Log that surfaces parser warnings, fallback guidance, copyable troubleshooting notes, and clearer batch summaries for pages that still need manual review.
 
 ---
 
