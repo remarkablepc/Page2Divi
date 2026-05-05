@@ -88,6 +88,7 @@ page2divi --url "https://example.com/page"
 - Rebuild the **section / row / column / module skeleton** with per-builder structural mappings.
 - Preserve useful styling such as **background images and colors**, **padding / margin**, **heading font + size + weight**, **text color**, **alignment**, and **line-height** where the source exposes it.
 - Download referenced **images, video posters, and same-site documents** into the output folder so the imported page is self-contained.
+- Open the **Conversion Matrix inside the app** through a bundled, self-contained viewer.
 - Detect **WooCommerce / JSON-LD / microdata product pages** and emit Divi WooCommerce dynamic modules (`et_pb_wc_*`) plus a static fallback section.
 - Run **entirely on your machine** - no telemetry, no login, no cloud.
 
@@ -120,6 +121,8 @@ The conversion matrix is available inside the app under **Help -> Conversion Mat
 5. Click **Preview** (parser dry-run) or **Convert** (writes `page.json` + media).
 6. In Divi, use **Portability -> Import** on the resulting `page.json`.
 
+The desktop UI also includes a bundled Conversion Matrix viewer plus an Activity Log that surfaces parser warnings, fallback guidance, and copyable troubleshooting notes.
+
 ---
 
 ## Command-line usage (Windows)
@@ -146,6 +149,7 @@ A site-specific folder under `output/<domain>/`:
 
 - `page.json` - Divi import bundle.
 - `media/` - downloaded assets used by the export, including referenced images plus same-site documents such as PDF, Office, audio, video, and archive files.
+- `HTML/` - experimental preview/reference exports only. These help you inspect what Page2Divi extracted, but they are not imported into Divi. They are intentionally focused on visible layout/content: runtime script blobs are stripped from the reference output while visual embeds such as iframes still render in the preview. Treat these files as a debugging aid rather than a polished browser-faithful preview, especially on complex or JavaScript-heavy pages.
 - A conversion log with parser diagnostics and a text mockup of the emitted layout.
 
 Reruns reuse files already on disk for the same source URL when possible.
@@ -156,6 +160,8 @@ Reruns reuse files already on disk for the same source URL when possible.
 
 - **Pixel-perfect cloning is not a goal**. Complex builder pages, custom JS widgets, and design-token-driven CSS will need manual cleanup.
 - **Deeply nested or unusual HTML** may simplify into Text fallback modules; content is kept, structure may flatten.
+- **The `HTML/` preview/reference output is experimental.** It is useful as a debugging aid for inspection and troubleshooting, but it is not yet reliable enough to present as a polished reproduction of complex or JavaScript-heavy pages.
+- **Some Wix, Wix Studio, and other JavaScript-heavy sites** save or serve a hydration shell first and render the visible page later with client-side scripts. Page2Divi now flags those saves in the Activity Log so the failure mode is clearer, but the fallback is still practical rather than magical: try the live URL first; if prompted, allow the browser-assisted retry; if a saved file still contains only shell markup (`astro-island`, `__NEXT_DATA__`, empty `#root` / `#app`, etc.), capture the rendered DOM from your browser's DevTools (`Elements` -> right-click `<html>` -> `Copy` -> `outerHTML`) and bring that back through **HTML paste**, or save a fully rendered local copy and import it through **Load From File** or **Source Folder**.
 - **Elementor galleries** fall back to individual Image modules because Divi's Gallery module needs WordPress attachment IDs.
 - **WooCommerce dynamic modules** (`et_pb_wc_*`) only render fully when bound to a real WooCommerce product on the destination site; a static fallback section is always emitted alongside them.
 - **macOS build is unsigned and untested**. See the macOS section above.
