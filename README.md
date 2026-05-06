@@ -86,6 +86,7 @@ page2divi --url "https://example.com/page"
 ## What it does
 
 - Convert **live URLs** (single, batch, or sitemap.xml).
+- Handle **JavaScript-heavy pages** with a private browser-assisted retry when the raw HTML is only a hydration shell.
 - Convert **pasted HTML** straight from a browser, an editor, or dev tools.
 - Convert **local files**: `.html`, `.mhtml`, `.zip` saved-page bundles, WordPress WXR XML, GetSimple CMS XML, or existing Divi 4 / 5 JSON.
 - Convert **source folders** with sibling `images` / `assets` so relative links resolve.
@@ -95,6 +96,16 @@ page2divi --url "https://example.com/page"
 - Open the **Conversion Matrix inside the app** through a bundled, self-contained viewer.
 - Detect **WooCommerce / JSON-LD / microdata product pages** and emit Divi WooCommerce dynamic modules (`et_pb_wc_*`) plus a static fallback section.
 - Run **entirely on your machine** - no telemetry, no login, no cloud.
+
+## JavaScript-heavy pages and browser-assisted capture
+
+Some modern sites, especially Wix and similar script-heavy stacks, do not expose their real content in the first HTML response. In those cases Page2Divi can offer a **private browser-assisted retry** that captures a rendered snapshot using an isolated browser profile instead of relying on your regular browser session.
+
+That means:
+
+- better results on hydration-shell pages,
+- clearer Activity Log messages about when a rendered snapshot was used,
+- and less need to manually copy the DOM out of your normal browser.
 
 ---
 
@@ -169,7 +180,7 @@ Some sites render most of their visible content in the browser after the initial
 
 ### What is the `HTML/` folder for?
 
-It is an experimental preview/reference export for inspection and troubleshooting. It is not imported into Divi and should be treated as a debugging aid rather than a polished browser-faithful preview.
+It is an experimental preview/reference export for inspection and troubleshooting. It is not imported into Divi, but it now tries to stay much closer to the final imported result by using the same locally downloaded media files as the JSON whenever possible. It should still be treated as a reference/debugging aid rather than a pixel-perfect browser clone.
 
 ---
 
@@ -179,7 +190,7 @@ A site-specific folder under `output/<domain>/`:
 
 - `page.json` - Divi import bundle.
 - `media/` - downloaded assets used by the export, including referenced images plus same-site documents such as PDF, Office, audio, video, and archive files.
-- `HTML/` - experimental preview/reference exports only. These help you inspect what Page2Divi extracted, but they are not imported into Divi. They are intentionally focused on visible layout/content: runtime script blobs are stripped from the reference output while visual embeds such as iframes still render in the preview. Treat these files as a debugging aid rather than a polished browser-faithful preview, especially on complex or JavaScript-heavy pages.
+- `HTML/` - experimental preview/reference exports only. These help you inspect what Page2Divi extracted, but they are not imported into Divi. They are intentionally focused on visible layout/content and now prefer the same local media files used by the JSON so the preview is closer to what you will see after import. Runtime script blobs, menus/footers detected as page chrome, and external visual embeds that cannot be localized are stripped or skipped rather than forcing the preview to pull live content.
 - A conversion log with parser diagnostics and a text mockup of the emitted layout.
 
 Reruns reuse files already on disk for the same source URL when possible.
@@ -190,7 +201,7 @@ Reruns reuse files already on disk for the same source URL when possible.
 
 - **Pixel-perfect cloning is not a goal**. Complex builder pages, custom JS widgets, and design-token-driven CSS will need manual cleanup.
 - **Deeply nested or unusual HTML** may simplify into Text fallback modules; content is kept, structure may flatten.
-- **The `HTML/` preview/reference output is experimental.** It is useful as a debugging aid for inspection and troubleshooting, but it is not yet reliable enough to present as a polished reproduction of complex or JavaScript-heavy pages.
+- **The `HTML/` preview/reference output is still experimental.** It is now closer to the imported JSON because it reuses local media where possible, but it remains a reference/debugging artifact rather than a polished browser-faithful clone.
 - **Some Wix, Wix Studio, and other JavaScript-heavy sites** save or serve a hydration shell first and render the visible page later with client-side scripts. Page2Divi now flags those saves in the Activity Log so the failure mode is clearer, but the fallback is still practical rather than magical: try the live URL first; if prompted, allow the browser-assisted retry; if a saved file still contains only shell markup (`astro-island`, `__NEXT_DATA__`, empty `#root` / `#app`, etc.), capture the rendered DOM from your browser's DevTools (`Elements` -> right-click `<html>` -> `Copy` -> `outerHTML`) and bring that back through **HTML paste**, or save a fully rendered local copy and import it through **Load From File** or **Source Folder**.
 - **Elementor galleries** fall back to individual Image modules because Divi's Gallery module needs WordPress attachment IDs.
 - **WooCommerce dynamic modules** (`et_pb_wc_*`) only render fully when bound to a real WooCommerce product on the destination site; a static fallback section is always emitted alongside them.
