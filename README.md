@@ -8,6 +8,16 @@ It rebuilds page structure from live URLs, pasted markup, local HTML / MHTML fil
 
 _Sanitized example view of the desktop tool. Private URLs and local output paths are intentionally omitted._
 
+## New in this release
+
+- Divi-aware compare views in **Preview** and **Tools** so you can inspect source-vs-output structure, warnings, and JSON differences before or after export.
+- Saved `.p2d` session profiles for recurring jobs.
+- Built-in **Quick Start**, **Documentation**, **Conversion Matrix**, and easier release checks from the **Help** menu.
+- Advanced browser fallback and debug logging controls for JavaScript-heavy pages.
+- Expanded Google Stitch and Divi 5 coverage, including automatic Divi 5 variable generation for supported repeated fields.
+
+> **Divi 5 variable creation is still a work in progress.** Treat the generated variables as a useful starting point and verify the imported result in Divi 5 before depending on it for production cleanup.
+
 ## Why this exists
 
 I wrote Page2Divi because real-world Divi migrations are repetitive and slow. Copying content, rebuilding sections, relinking media, and hand-translating layouts from other builders wastes time before the real design work even starts.
@@ -91,9 +101,14 @@ page2divi --url "https://example.com/page"
 - Convert **local files**: `.html`, `.mhtml`, `.zip` saved-page bundles, WordPress WXR XML, GetSimple CMS XML, or existing Divi 4 / 5 JSON.
 - Convert **source folders** with sibling `images` / `assets` so relative links resolve.
 - Rebuild the **section / row / column / module skeleton** with per-builder structural mappings.
+- Open **Divi-aware compare views** for Preview results, saved exports, and the current source state so structural mismatches are easier to review.
 - Preserve useful styling such as **background images and colors**, **padding / margin**, **heading font + size + weight**, **text color**, **alignment**, and **line-height** where the source exposes it.
 - Download referenced **images, video posters, and same-site documents** into the output folder so the imported page is self-contained.
 - Open the **Conversion Matrix inside the app** through a bundled, self-contained viewer.
+- Save and reopen **session profiles (`.p2d`)** so repeat jobs restore the same visible UI settings.
+- Open **Quick Start**, **Documentation**, and **Check for Updates** directly from the Help menu.
+- Use **advanced browser fallback and debug logging controls** when a page needs rendered capture or deeper troubleshooting.
+- Emit **Divi 5 global variables** for supported repeated values and preserved source tokens when Divi 5 export is selected.
 - Detect **WooCommerce / JSON-LD / microdata product pages** and emit Divi WooCommerce dynamic modules (`et_pb_wc_*`) plus a static fallback section.
 - Run **entirely on your machine** - no telemetry, no login, no cloud.
 
@@ -202,6 +217,7 @@ Reruns reuse files already on disk for the same source URL when possible.
 - **Pixel-perfect cloning is not a goal**. Complex builder pages, custom JS widgets, and design-token-driven CSS will need manual cleanup.
 - **Deeply nested or unusual HTML** may simplify into Text fallback modules; content is kept, structure may flatten.
 - **The `HTML/` preview/reference output is still experimental.** It is now closer to the imported JSON because it reuses local media where possible, but it remains a reference/debugging artifact rather than a polished browser-faithful clone.
+- **Divi 5 variable creation is still a work in progress.** Supported repeated values can now be linked automatically, but you should still review the imported variables and module bindings inside Divi 5.
 - **Some Wix, Wix Studio, and other JavaScript-heavy sites** save or serve a hydration shell first and render the visible page later with client-side scripts. Page2Divi now flags those saves in the Activity Log so the failure mode is clearer, but the fallback is still practical rather than magical: try the live URL first; if prompted, allow the browser-assisted retry; if a saved file still contains only shell markup (`astro-island`, `__NEXT_DATA__`, empty `#root` / `#app`, etc.), capture the rendered DOM from your browser's DevTools (`Elements` -> right-click `<html>` -> `Copy` -> `outerHTML`) and bring that back through **HTML paste**, or save a fully rendered local copy and import it through **Load From File** or **Source Folder**.
 - **Elementor galleries** fall back to individual Image modules because Divi's Gallery module needs WordPress attachment IDs.
 - **WooCommerce dynamic modules** (`et_pb_wc_*`) only render fully when bound to a real WooCommerce product on the destination site; a static fallback section is always emitted alongside them.
