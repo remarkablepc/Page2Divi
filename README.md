@@ -23,7 +23,7 @@ _Windows screenshot of the desktop tool. URLs and local output paths are intenti
 - Download referenced **images, video posters, and same-site documents** into the output folder so the imported page is self-contained.
 - Open the **Conversion Matrix inside the app** through a bundled, self-contained viewer.
 - Save and reopen **session profiles (`.p2d`)** so repeat jobs restore the same visible UI settings.
-- Open **Quick Start**, **Documentation**, and **Check for Updates** directly from the Help menu.
+- **Check for Updates** directly from the Help menu.
 - Use **advanced browser fallback and debug logging controls** when a page needs rendered capture or deeper troubleshooting.
 - Emit **Divi 5 global variables** for supported repeated values and preserved source tokens when Divi 5 export is selected.
 - Detect **WooCommerce / JSON-LD / microdata product pages** and emit Divi WooCommerce dynamic modules (`et_pb_wc_*`) plus a static fallback section.
