@@ -115,6 +115,7 @@ All binaries (Windows + macOS) are published on the [Releases page](https://gith
 
 > **The macOS build is an early release and hasn’t been fully tested yet.**  
 > It builds from the same source tree and the code paths it touches are cross-platform, but Mac-specific behaviour (Gatekeeper, file dialogs, Tk on Retina, etc.) has not been verified end-to-end. Please open an issue if anything breaks.
+> On some Intel Macs, the first launch can also take a little longer because macOS has to verify the larger universal app bundle.
 
 1. Download the macOS universal2 zip from the [latest release](https://github.com/remarkablepc/Page2Divi/releases/latest).  
 2. Unzip it. You will get `Page2Divi.app`. Move it to `/Applications` (optional but recommended).  
