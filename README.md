@@ -99,7 +99,7 @@ All binaries (Windows + macOS) are published on the [Releases page](https://gith
 | Platform | Asset | Notes |
 | --- | --- | --- |
 | **Windows x64** | Latest Windows zip asset | Single-file `Page2Divi.exe` inside. No installer, no admin required. |
-| **macOS (universal2)** | Latest macOS universal2 zip asset | `Page2Divi.app` bundle intended for both Apple Silicon and Intel Macs. Experimental and untested by the author – see the macOS notes below. |
+| **macOS (universal2)** | Latest macOS universal2 zip asset | `Page2Divi.app` bundle intended for both Apple Silicon and Intel Macs. Early release and not fully tested – see the macOS notes below. |
 
 ---
 
