@@ -4,7 +4,7 @@
 
 > **Download Latest Release:** [v0076](https://github.com/remarkablepc/Page2Divi/releases/tag/v0076)
 
-**Page2Divi is a standalone desktop tool that converts pages and HTML into Divi-compatible import JSON.**
+**Page2Divi is a standalone desktop tool that converts webpages and HTML into Divi-compatible import JSON.**
 
 It rebuilds page structure from live URLs, pasted markup, local HTML / MHTML files, saved-page ZIPs, source folders, WordPress WXR exports, GetSimple CMS XML, and existing Divi 4 / 5 layouts, then writes a `page.json` you import through the Divi Builder's Portability dialog.
 
