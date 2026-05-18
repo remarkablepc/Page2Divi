@@ -1,3 +1,5 @@
+[![Download Latest](https://img.shields.io/github/v/release/remarkablepc/Page2Divi?label=Download%20Latest&style=for-the-badge)](https://github.com/remarkablepc/Page2Divi/releases/latest)
+
 # Page2Divi – Binary Releases
 
 > **Download Latest Release:** [v0076](https://github.com/remarkablepc/Page2Divi/releases/tag/v0076)
