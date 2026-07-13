@@ -2,19 +2,32 @@
 
 # Page2Divi – Binary Releases
 
-> Download Latest Release: [v1.00](https://github.com/remarkablepc/Page2Divi/releases/latest)
-Released July 2026 for the 250th of USA
+<p>Released July 2026 — <img src="https://flagcdn.com/us.svg" width="18" alt="USA Flag"> USA 250th Anniversary Edition</p>
 
-Page2Divi is a standalone desktop tool that converts webpages and HTML into Divi-compatible import JSON.
+**Save hours of migration work. Convert static pages, legacy CMSs, or layouts from other page builders into WordPress & Divi in seconds—locally, securely, and offline.**
 
-It rebuilds page structure from live URLs, pasted markup, local HTML / MHTML files, saved-page ZIPs, local folders, WordPress WXR exports, GetSimple CMS XML, and existing Divi 4 / 5 layouts, then writes a `.Divi4.json` or `.Divi5.json` file you import through the Divi Builder's Portability dialog.
+Page2Divi is a standalone desktop tool that converts webpages and HTML into Divi-compatible import JSON. It rebuilds section, row, column, and module structure, downloads referenced media files, and exports a `.Divi4.json` or `.Divi5.json` file ready for import.
 
 ![Page2Divi desktop app screenshot](images/page2divi-tool-screenshot.png)
 
 _Sanitized example view of the desktop tool. Private URLs and local output paths are intentionally omitted._
 
+## Quick Start in 3 Steps
+
+1. **Download & Launch:** Download the latest `.zip` for your OS from the [Releases page](https://github.com/remarkablepc/Page2Divi/releases/latest), extract it, and launch the executable (`Page2Divi.exe` on Windows or `Page2Divi.app` on macOS).
+2. **Convert:** Paste your source URL, raw HTML, or local file path, select your target **Divi 4** or **Divi 5** version, and click **Convert** to generate the layout file and download referenced media assets.
+3. **Import to Divi:** On your WordPress site, open the Divi Builder, click the **Portability (Import/Export)** icon in the settings menu, select the **Import** tab, and upload your generated `.json` file.
+
+---
+
+## Download Latest Stable Release
+
 [![Download for Windows](https://img.shields.io/badge/Download-Windows-blue?style=for-the-badge&logo=windows)](https://github.com/remarkablepc/Page2Divi/releases/latest)
 [![Download for macOS](https://img.shields.io/badge/Download-macOS-lightgrey?style=for-the-badge&logo=apple)](https://github.com/remarkablepc/Page2Divi/releases/latest)
+
+> [!IMPORTANT]
+> **Download the pre-compiled binary packages (`Page2Divi-v1.00-windows.zip` or `Page2Divi-v1.00-macos-universal2.zip`) under the Release assets.**
+> The automatically generated "Source code (zip / tar.gz)" links at the bottom of the release are created by GitHub and do not contain the application files (the application source is private).
 
 ---
 
