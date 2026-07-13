@@ -4,7 +4,7 @@
 
 <p>Released July 2026 — <img src="https://flagcdn.com/us.svg" width="18" alt="USA Flag"> USA 250th Anniversary Edition</p>
 
-**Save hours of migration work. Convert static pages, legacy CMSs, or layouts from other page builders into WordPress & Divi in seconds—locally, securely, and offline.**
+**Save hours of migration work. Convert static pages, legacy CMSs, or layouts from other page builders into WordPress & Divi in seconds—locally, securely, and offline.** Free for commercial or personal use.
 
 Page2Divi is a standalone desktop tool that converts webpages and HTML into Divi-compatible import JSON. It rebuilds section, row, column, and module structure, downloads referenced media files, and exports a `.Divi4.json` or `.Divi5.json` file ready for import.
 
