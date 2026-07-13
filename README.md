@@ -104,6 +104,21 @@ The goal is not a perfect one-click clone. The goal is to give you a solid Divi 
 
 ---
 
+## Why a Desktop Tool?
+
+Page2Divi is intentionally built as a standalone desktop utility rather than a WordPress plugin for three core reasons:
+
+### Reliability & Longevity
+Running outside the WordPress ecosystem means your workflow stays stable no matter what happens inside your site. Theme updates, plugin conflicts, and surprise WordPress core changes can break plugin‑based tools without warning. A desktop utility avoids all of that, giving you a conversion workflow that remains consistent.
+
+### Performance, Security & Privacy (No Telemetry / No "Phone Home")
+Every conversion happens directly on your machine. There are no cloud servers, no remote API dependencies, no telemetry tracking, and absolutely no "phone home" analytics. Your source pages, HTML content, and exported Divi JSON bundles never leave your computer. This keeps the process fast, predictable, and completely private. *(The only network requests made are to fetch the URLs you explicitly convert, or to query GitHub for new releases when you manually run the update checker).*
+
+### Zero‑Bloat Workflow
+WordPress sites are already overloaded with plugins. Page2Divi keeps your site clean by doing all the heavy lifting before anything ever touches WordPress. You simply import the finished JSON layouts, avoiding plugin overhead, update risks, and recurring SaaS subscriptions.
+
+---
+
 ## Who this is for
 
 Page2Divi is for people who already work in Divi and want a practical head start.
