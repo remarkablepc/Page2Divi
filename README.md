@@ -8,7 +8,7 @@ Page2Divi is a standalone desktop tool that converts webpages and HTML into Divi
 
 It rebuilds page structure from live URLs, pasted markup, local HTML / MHTML files, saved-page ZIPs, local folders, WordPress WXR exports, GetSimple CMS XML, and existing Divi 4 / 5 layouts, then writes a `.Divi4.json` or `.Divi5.json` file you import through the Divi Builder's Portability dialog.
 
-![Page2Divi desktop app screenshot](images/page2divi-tool-screenshot.svg)
+![Page2Divi desktop app screenshot](images/page2divi-tool-screenshot.png)
 
 _Sanitized example view of the desktop tool. Private URLs and local output paths are intentionally omitted._
 
