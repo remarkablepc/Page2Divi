@@ -337,6 +337,6 @@ This is documented mainly for transparency and to reserve the **Site2Divi** name
 
 ## Support and feedback
 
-If you run into an issue or want to suggest an improvement, use the issue tracker on this repo. Sample source HTML and a converted JSON helps.
+If you run into an issue or have an idea that could make things better, you can post in the Discussions forum here on the repo. Sharing the source HTML along with the converted JSON makes it much easier for me to see what’s going on.
 
-If it saves you time and you want to support development, there is a sponsor link in the app's About dialog.
+If the app ends up saving you time and you’d like to support the work, there’s a sponsor link in the About dialog. Totally optional, always appreciated.
