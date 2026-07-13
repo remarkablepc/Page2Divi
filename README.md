@@ -3,6 +3,7 @@
 # Page2Divi – Binary Releases
 
 > Download Latest Release: [v1.00](https://github.com/remarkablepc/Page2Divi/releases/latest)
+Released July 2026 for the 250th of USA
 
 Page2Divi is a standalone desktop tool that converts webpages and HTML into Divi-compatible import JSON.
 
