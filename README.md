@@ -6,6 +6,8 @@
 
 **Save hours of migration work. Convert static pages, legacy CMSs, or layouts from other page builders into WordPress & Divi in seconds—locally, securely, and offline.** Free for commercial or personal use.
 
+*Page2Divi is built for creators who want control, speed, and privacy.*
+
 Page2Divi is a standalone desktop tool that converts webpages and HTML into Divi-compatible import JSON. It rebuilds section, row, column, and module structure, downloads referenced media files, and exports a `.Divi4.json` or `.Divi5.json` file ready for import.
 
 ![Page2Divi desktop app screenshot](images/page2divi-tool-screenshot.png)
@@ -88,7 +90,7 @@ v1.00 is a major milestone release, bringing extensive parser coverage, import f
 
 ## What it does not do
 
-- It is not a WordPress plugin and does not modify Divi.
+- It is not a WordPress plugin and does not modify WordPress, Divi, or your local operating system settings.
 - It does **not** create Pages, Posts, Categories, Tags, Menu items, or WooCommerce products. The export is **page content only**.
 - It does not produce pixel-perfect copies. Complex builder pages will still need cleanup.
 - It does not bundle, redistribute, or download Divi. You bring your own Divi license.
@@ -104,20 +106,7 @@ The goal is not a perfect one-click clone. The goal is to give you a solid Divi 
 
 ---
 
-## Why a Desktop Tool?
 
-Page2Divi is intentionally built as a standalone desktop utility rather than a WordPress plugin for three core reasons:
-
-### Reliability & Longevity
-Running outside the WordPress ecosystem means your workflow stays stable no matter what happens inside your site. Theme updates, plugin conflicts, and surprise WordPress core changes can break plugin‑based tools without warning. A desktop utility avoids all of that, giving you a conversion workflow that remains consistent.
-
-### Performance, Security & Privacy (No Telemetry / No "Phone Home")
-Every conversion happens directly on your machine. There are no cloud servers, no remote API dependencies, no telemetry tracking, and absolutely no "phone home" analytics. Your source pages, HTML content, and exported Divi JSON bundles never leave your computer. This keeps the process fast, predictable, and completely private. *(The only network requests made are to fetch the URLs you explicitly convert, or to check for updates if you trigger the update checker).*
-
-### Zero‑Bloat Workflow
-WordPress sites are already overloaded with plugins. Page2Divi keeps your site clean by doing all the heavy lifting before anything ever touches WordPress. You simply import the finished JSON layouts, avoiding plugin overhead, update risks, and recurring SaaS subscriptions.
-
----
 
 ## Who this is for
 
@@ -258,9 +247,22 @@ Other useful flags include `--heading-mapping`, `--internal-links`, and `--targe
 
 ## FAQ
 
-### Is this a WordPress plugin?
+### Why is Page2Divi a desktop tool instead of a WordPress plugin?
 
-No. It is a desktop tool that creates Divi-compatible import JSON on your machine. You still import the resulting `.Divi4.json` or `.Divi5.json` file through Divi's Portability dialog.
+Rather than overloading your WordPress site with plugins, Page2Divi does all the heavy lifting locally on your computer. You simply import the final `.Divi4.json` or `.Divi5.json` layout file through Divi's built-in Portability dialog.
+
+Running as a standalone desktop tool offers several key advantages:
+- **Fully Portable:** It is a single executable that requires no installation and changes nothing on your system. To remove it, you just delete the file.
+- **Zero System Footprint:** Page2Divi does not modify your WordPress installation, your Divi files, or your local system settings. It runs in isolation, creating files only when and where you choose.
+- **Reliability & Longevity:** It operates completely outside the WordPress ecosystem. Theme updates, plugin conflicts, or core WordPress updates won't break your conversion workflow.
+- **Zero-Bloat Workflow:** It saves you from plugin overhead, security/update risks, and recurring SaaS subscription fees.
+- **Privacy & Security (Desktop vs. Plugin):** Unlike WordPress plugins that often connect to third-party APIs, run background "phone-homes," or leak telemetry, a desktop tool keeps your data completely off the internet. Conversions happen locally. There are no cloud servers, remote dependencies, or telemetry tracking—your content and layouts never leave your machine.
+
+### Why isn't Page2Divi open-source?
+
+Keeping Page2Divi closed-source is about protecting the integrity of the project. In the WordPress ecosystem, high-utility tools are frequently cloned, repackaged under paid SaaS subscriptions, or injected with tracking scripts almost immediately. 
+
+This decision isn't about hiding how the tool works—it's about preventing unauthorized third parties from commercially exploiting or paywalling my work. Keeping it closed-source ensures Page2Divi stays clean, local, and private, while allowing me to keep the core tool accessible and supported directly by the community.
 
 ### Does it send my content anywhere?
 
