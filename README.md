@@ -1,11 +1,27 @@
-[![Download Latest](https://img.shields.io/badge/DOWNLOAD_LATEST-v1.00-orange?style=for-the-badge)](https://github.com/remarkablepc/Page2Divi/releases/latest)
+# Page2Divi – Webpage to Divi Layout Converter
+### *Convert static pages, legacy CMSs, or layouts from other page builders into WordPress & Divi in seconds—locally, securely, and offline.*
+**Maintained by [RemarkablePC](https://github.com/remarkablepc)**
 
-# Page2Divi – Binary Releases
+<p align="center">
+  <a href="https://github.com/remarkablepc/Page2Divi/releases/latest"><img src="https://img.shields.io/badge/Release-v1.00-orange?logo=github&logoColor=white" alt="Latest Release" /></a>
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20macOS-0078D4?logo=windows&logoColor=white" alt="Platform" />
+  <img src="https://img.shields.io/badge/Divi%20Target-Divi%204%20%26%20Divi%205-purple" alt="Divi 4 & 5" />
+  <img src="https://img.shields.io/badge/License-Free%20for%20Personal%20%26%20Commercial-brightgreen" alt="Free License" />
+  <img src="https://img.shields.io/badge/Telemetry-Zero%20Remote%20Data-brightgreen" alt="Zero Telemetry" />
+  <a href="https://github.com/sponsors/remarkablepc?utm_source=Page2Divi"><img src="https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-EA4AAA?logo=githubsponsors&logoColor=white" alt="GitHub Sponsors" /></a>
+  <a href="https://www.paypal.com/ncp/payment/EKH76RTYHH24S?utm_source=Page2Divi"><img src="https://img.shields.io/badge/Say%20Thanks-PayPal-00457C?logo=paypal&logoColor=white" alt="Say Thanks" /></a>
+  <a href="https://github.com/remarkablepc/Page2Divi/discussions"><img src="https://img.shields.io/badge/Community-GitHub%20Discussions-informational?logo=github&logoColor=white" alt="Discussions" /></a>
+</p>
+
+> [!IMPORTANT]
+> ### 💡 3 Key Unique Capabilities
+> 1. **Zero-Plugin, Standalone Desktop Architecture**: Runs 100% locally on your machine—no WordPress plugins to install, no SaaS subscriptions, no third-party API keys, and zero telemetry or cloud dependencies.
+> 2. **Dual-Engine Structural Rebuilding (Divi 4 & Divi 5)**: Automatically parses sections, rows, columns, and modules from Elementor, Avada, Kadence, Spectra, or raw HTML, emitting native `.Divi4.json` or modern `.Divi5.json` layout bundles ready for 1-click import.
+> 3. **Self-Contained Asset Harvester & Hydration Recovery**: Downloads all referenced images, videos, and media files directly into a localized folder, with browser-assisted retry modes to capture complex JavaScript-rendered pages and hydration shells.
 
 <p>Released July 2026 — <img src="https://flagcdn.com/us.svg" width="18" alt="USA Flag"> USA 250th Anniversary Edition</p>
 
 **Save hours of migration work. Convert static pages, legacy CMSs, or layouts from other page builders into WordPress & Divi in seconds—locally, securely, and offline.** Free for commercial or personal use.
-
 *Page2Divi is built for creators who want control, speed, and privacy.*
 
 Page2Divi is a standalone desktop tool that converts webpages and HTML into Divi-compatible import JSON. It rebuilds section, row, column, and module structure, downloads referenced media files, and exports a `.Divi4.json` or `.Divi5.json` file ready for import.
@@ -337,8 +353,28 @@ This is documented mainly for transparency and to reserve the **Site2Divi** name
 
 ---
 
+## 👨‍💻 Behind Page2Divi & Author's Note
+
+> *"I built Page2Divi out of the frustration of manually copying and pasting elements across countless site redesigns. I wanted a fast, private, local tool that would rebuild the structural skeleton of a page without locking anyone into a recurring SaaS subscription or bloated plugins. It is completely free for personal and commercial use—I hope it saves you countless hours of tedious migration work."*  
+>  
+> — **David @ RemarkablePC**
+
+---
+
+### ☕ Support & Say Thanks
+Page2Divi is **100% free for commercial and personal use**—there are no paywalls, feature limits, or telemetry. If Page2Divi saved you or your agency hours on a client migration, donations and tips are warmly welcomed:
+* **[Sponsor on GitHub](https://github.com/sponsors/remarkablepc?utm_source=Page2Divi)**
+* **[Say Thanks via PayPal](https://www.paypal.com/ncp/payment/EKH76RTYHH24S?utm_source=Page2Divi)**
+
+---
+
+### 🛠️ Explore More Tools
+Explore more utilities, technician suites, and projects on GitHub:  
+👉 **[github.com/remarkablepc](https://github.com/remarkablepc)**
+
+---
+
 ## Support and feedback
 
 If you run into an issue or have an idea that could make things better, you can post in the Discussions forum here on the repo. Sharing the source HTML along with the converted JSON makes it much easier for me to see what’s going on.
 
-If the app ends up saving you time and you’d like to support the work, there’s a sponsor link in the About dialog. Totally optional, always appreciated.
