@@ -374,7 +374,9 @@ Explore more utilities, technician suites, and projects on GitHub:
 
 ---
 
-## Support and feedback
+## 💬 Community & Peer Discussions
 
-If you run into an issue or have an idea that could make things better, you can post in the Discussions forum here on the repo. Sharing the source HTML along with the converted JSON makes it much easier for me to see what’s going on.
+If you run into an unexpected conversion result, have bench observations, or want to share feedback with fellow designers, join the conversation in our GitHub Discussions forum:
+* **[GitHub Discussions](https://github.com/remarkablepc/Page2Divi/discussions)**
 
+*(Note: Page2Divi is an independent, free passion project provided as-is without individual, one-on-one technical support. If you share source HTML samples and converted JSON in Discussions for community review, please ensure any sensitive or proprietary client data is redacted first).*
