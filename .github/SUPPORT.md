@@ -2,7 +2,7 @@
 
 Thank you for using **Page2Divi**!
 
-## Passion Project Notice & Support Boundary
+## Software Notice & Support Boundary
 
 Page2Divi is an independent, free desktop utility created and maintained by **David @ RemarkablePC**. 
 
